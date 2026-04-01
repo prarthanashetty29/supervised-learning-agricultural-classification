@@ -25,8 +25,11 @@ Nodes are split using Gini impurity (scikit-learn default). Both pre-pruning (`m
 - **Rice**: Susceptible to overfitting as depth increases; post-pruning is more effective
 - **Wine**: Performs well at depth 3; pre-pruning is the better fit
 
-![Decision Tree Validation Curves](Images/decision_tree_validation_curves.png)
-*Validation curves for max_depth — Rice (left) vs. Wine (right)*
+<div align="center">
+  <img src="Images/decision_tree_validation_curves.png" width="650"/>
+  <p><em>Figure 1. Validation accuracy across max_depth values for Decision Trees — Rice dataset (left) and Wine dataset (right)</em></p>
+</div>
+
 
 | Dataset | Best `ccp_alpha` | Best `max_depth` | Accuracy |
 |---|---|---|---|
@@ -42,8 +45,11 @@ An ensemble approach using `AdaBoostClassifier` over weak decision tree learners
 - Optimal learning rate is ~0.1 for wine; 0.01–0.1 for rice
 - Learning curves show convergence and minimal variance — no signs of overfitting
 
-![AdaBoost Learning Curves](Images/adaboost_learning_curves.png)
-*AdaBoost learning curves showing convergence — Rice (left) vs. Wine (right)*
+<div align="center">
+  <img src="Images/adaboost_learning_curves.png" width="650"/>
+  <p><em>Figure 2. Learning curves for AdaBoost — Rice dataset (left) and Wine dataset (right)</em></p>
+</div>
+
 
 | Dataset | `n_estimators` | `learning_rate` | Accuracy |
 |---|---|---|---|
@@ -58,8 +64,11 @@ Implemented via `SVC`. Two kernels were evaluated — linear and sigmoid — alo
 - **Rice**: Linear kernel with C=10 performs best; validation and training converge with minimal overfitting
 - **Wine**: Linear kernel generalizes well; sigmoid appeared accurate on paper but showed signs of underfitting
 
-![SVM Linear Learning Curves](Images/svm_linear_learning_curves.png)
-*SVM linear kernel learning curves — Rice (left) vs. Wine (right)*
+<div align="center">
+  <img src="Images/svm_linear_learning_curves.png" width="650"/>
+  <p><em>Figure 3. Learning curves for SVM with linear kernel — Rice dataset (left) and Wine dataset (right)</em></p>
+</div>
+
 
 | Dataset | `C` | Kernel | Accuracy |
 |---|---|---|---|
@@ -77,8 +86,11 @@ Implemented via `KNeighborsClassifier`. Key parameters: number of neighbors `k` 
 - **Rice**: Optimal `k` is 8–20; accuracy stabilizes around 91.5–92% and is largely unaffected by `p`
 - Both models may benefit from additional training data
 
-![k-NN Validation Curves](Images/knn_validation_curves.png)
-*k-NN validation curves for k — Rice (left) vs. Wine (right), note the sharp drop-off in Wine after k=20*
+<div align="center">
+  <img src="Images/knn_validation_curves.png" width="650"/>
+  <p><em>Figure 4. k-NN validation accuracy across k values — Rice dataset (left) and Wine dataset (right)</em></p>
+</div>
+
 
 | Dataset | `k` | `p` | Accuracy |
 |---|---|---|---|
@@ -94,8 +106,11 @@ Implemented via `MLPClassifier` with two hidden layers (4 nodes each). Key param
 - Wine shows more fluctuation in loss but converges to a higher accuracy
 - Rice learning curve shows low variance and strong generalization
 
-![Neural Network Score Curves](Images/nn_score_curves.png)
-*Training vs. validation accuracy over epochs — Rice (left) vs. Wine (right)*
+<div align="center">
+  <img src="Images/nn_score_curves.png" width="650"/>
+  <p><em>Figure 5. Training vs. validation accuracy across epochs — Rice dataset (left) and Wine dataset (right)</em></p>
+</div>
+
 
 | Dataset | `alpha` | `learning_rate` | Accuracy |
 |---|---|---|---|
@@ -106,8 +121,10 @@ Implemented via `MLPClassifier` with two hidden layers (4 nodes each). Key param
 
 ## Summary Comparison
 
-![Algorithm Accuracy Comparison](Images/summary_accuracy_comparison.png)
-*Side-by-side accuracy comparison across all five algorithms for both datasets*
+<div align="center">
+  <img src="Images/summary_accuracy_comparison.png" width="650"/>
+  <p><em>Figure 6. Side-by-side accuracy comparison across five algorithms for Wine and Rice datasets</em></p>
+</div>
 
 ### Wine Dataset
 
