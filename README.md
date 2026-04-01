@@ -42,7 +42,7 @@ An ensemble approach using `AdaBoostClassifier` over weak decision tree learners
 - Optimal learning rate is ~0.1 for wine; 0.01–0.1 for rice
 - Learning curves show convergence and minimal variance — no signs of overfitting
 
-![AdaBoost Learning Curves](assets/fig7_adaboost_learning_curves.png)
+![AdaBoost Learning Curves](Images/adaboost_learning_curves.png)
 *AdaBoost learning curves showing convergence — Rice (left) vs. Wine (right)*
 
 | Dataset | `n_estimators` | `learning_rate` | Accuracy |
@@ -58,7 +58,7 @@ Implemented via `SVC`. Two kernels were evaluated — linear and sigmoid — alo
 - **Rice**: Linear kernel with C=10 performs best; validation and training converge with minimal overfitting
 - **Wine**: Linear kernel generalizes well; sigmoid appeared accurate on paper but showed signs of underfitting
 
-![SVM Linear Learning Curves](assets/fig12_svm_linear_learning_curves.png)
+![SVM Linear Learning Curves](Images/svm_linear_learning_curves.png)
 *SVM linear kernel learning curves — Rice (left) vs. Wine (right)*
 
 | Dataset | `C` | Kernel | Accuracy |
@@ -77,7 +77,7 @@ Implemented via `KNeighborsClassifier`. Key parameters: number of neighbors `k` 
 - **Rice**: Optimal `k` is 8–20; accuracy stabilizes around 91.5–92% and is largely unaffected by `p`
 - Both models may benefit from additional training data
 
-![k-NN Validation Curves](assets/fig13_knn_validation_curves.png)
+![k-NN Validation Curves](Images/knn_validation_curves.png)
 *k-NN validation curves for k — Rice (left) vs. Wine (right), note the sharp drop-off in Wine after k=20*
 
 | Dataset | `k` | `p` | Accuracy |
@@ -94,7 +94,7 @@ Implemented via `MLPClassifier` with two hidden layers (4 nodes each). Key param
 - Wine shows more fluctuation in loss but converges to a higher accuracy
 - Rice learning curve shows low variance and strong generalization
 
-![Neural Network Score Curves](assets/fig21_nn_score_curves.png)
+![Neural Network Score Curves](Images/nn_score_curves.png)
 *Training vs. validation accuracy over epochs — Rice (left) vs. Wine (right)*
 
 | Dataset | `alpha` | `learning_rate` | Accuracy |
@@ -106,7 +106,7 @@ Implemented via `MLPClassifier` with two hidden layers (4 nodes each). Key param
 
 ## Summary Comparison
 
-![Algorithm Accuracy Comparison](assets/summary_accuracy_comparison.png)
+![Algorithm Accuracy Comparison](Images/summary_accuracy_comparison.png)
 *Side-by-side accuracy comparison across all five algorithms for both datasets*
 
 ### Wine Dataset
